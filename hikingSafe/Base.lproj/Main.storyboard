@@ -28,7 +28,7 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapButton1" destination="BYZ-38-t0r" eventType="touchUpInside" id="aus-6o-UX1"/>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="WVI-g3-TiD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-NH-eec">
@@ -39,6 +39,9 @@
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="g72-1X-URo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d8-Ve-to9">
                                         <rect key="frame" x="0.0" y="317.33333333333331" width="361" height="148.33333333333331"/>
@@ -48,6 +51,9 @@
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="ksl-u2-nUc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-Cf-adH">
                                         <rect key="frame" x="0.0" y="475.66666666666669" width="361" height="148.66666666666669"/>
@@ -57,6 +63,9 @@
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="3pP-ma-O09"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtK-rj-M47">
                                         <rect key="frame" x="0.0" y="634.33333333333337" width="361" height="148.66666666666663"/>
@@ -66,6 +75,9 @@
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="WyW-FF-5en"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -97,7 +109,7 @@
             <objects>
                 <viewController storyboardIdentifier="trailMain" id="24r-Fq-axK" customClass="SecondViewController" customModule="hikingSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eRx-mg-QjH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DvV-LL-0xw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,6 +120,9 @@
             <point key="canvasLocation" x="734" y="14"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WVI-g3-TiD"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

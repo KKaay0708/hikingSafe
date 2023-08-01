@@ -13,17 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-    @IBAction func didTapButton1(){
-        guard let tm = storyboard?.instantiateViewController(identifier: "trailMain") as? SecondViewController else {
-            print("Failed.")
-            return
-        }
-        present(tm, animated: true)
-    }
-    
-    
-    
 
 }
 
