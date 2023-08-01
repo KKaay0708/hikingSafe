@@ -27,6 +27,7 @@
                                             <backgroundConfiguration key="background">
                                                 <color key="backgroundColor" red="0.21513500029999999" green="0.5" blue="0.1756427468" alpha="0.25022746709999999" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="24r-Fq-axK" kind="presentation" id="WVI-g3-TiD"/>
@@ -39,6 +40,7 @@
                                             <backgroundConfiguration key="background" cornerRadius="15">
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="24r-Fq-axK" kind="presentation" id="g72-1X-URo"/>
@@ -51,6 +53,7 @@
                                             <backgroundConfiguration key="background" cornerRadius="15">
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="24r-Fq-axK" kind="presentation" id="ksl-u2-nUc"/>
@@ -63,6 +66,7 @@
                                             <backgroundConfiguration key="background" cornerRadius="15">
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="24r-Fq-axK" kind="presentation" id="3pP-ma-O09"/>
@@ -75,6 +79,7 @@
                                             <backgroundConfiguration key="background" cornerRadius="15">
                                                 <color key="backgroundColor" red="0.21513500032375793" green="0.5" blue="0.17564274684108949" alpha="0.25022746711377286" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="24r-Fq-axK" kind="presentation" id="WyW-FF-5en"/>
@@ -113,21 +118,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GE9-K9-tcD">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="611"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WFu-N4-ar2">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="621"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fOc-eZ-9v5">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mg7-9V-hpx">
+                                    <size key="itemSize" width="393" height="631"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZeT-EW-v2U">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iFg-nj-K5g">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="631"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="igQ-XF-RMH">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nku-bA-Vf2">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="631"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP0-7Q-mM5">
+                                                    <rect key="frame" x="0.0" y="8" width="393" height="100"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-GG-S9R">
+                                                    <rect key="frame" x="16" y="116" width="361" height="65.333333333333314"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AP-br-z9c">
+                                                            <rect key="frame" x="110.66666666666669" y="0.0" width="140" height="37"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-gi-gwW">
+                                                            <rect key="frame" x="119" y="45" width="123.33333333333331" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aP0-7Q-mM5" firstAttribute="leading" secondItem="nku-bA-Vf2" secondAttribute="leading" id="3vD-S6-Mld"/>
+                                                <constraint firstItem="hoH-GG-S9R" firstAttribute="top" secondItem="aP0-7Q-mM5" secondAttribute="bottom" constant="8" id="7lL-Fq-dwa"/>
+                                                <constraint firstItem="aP0-7Q-mM5" firstAttribute="top" secondItem="nku-bA-Vf2" secondAttribute="top" id="PNa-i0-biK"/>
+                                                <constraint firstAttribute="trailing" secondItem="hoH-GG-S9R" secondAttribute="trailing" constant="16" id="Zfg-XI-w9G"/>
+                                                <constraint firstItem="hoH-GG-S9R" firstAttribute="leading" secondItem="nku-bA-Vf2" secondAttribute="leading" constant="16" id="aIe-BI-px3"/>
+                                                <constraint firstAttribute="trailing" secondItem="aP0-7Q-mM5" secondAttribute="trailing" id="o0C-AX-Tpl"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="631"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -149,7 +188,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fte-MJ-hO5">
-                                <rect key="frame" x="138.66666666666666" y="611" width="116" height="58"/>
+                                <rect key="frame" x="138.66666666666666" y="643" width="115.66666666666666" height="26"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.21513500029999999" green="0.5" blue="0.1756427468" alpha="0.25022746709999999" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
@@ -162,14 +201,9 @@
                             <constraint firstItem="DvV-LL-0xw" firstAttribute="trailing" secondItem="aAu-jr-3ds" secondAttribute="trailing" constant="121.33333333333331" id="B01-hu-Ixm"/>
                             <constraint firstItem="fte-MJ-hO5" firstAttribute="centerX" secondItem="DvV-LL-0xw" secondAttribute="centerX" id="BxT-Cj-0EE"/>
                             <constraint firstItem="aAu-jr-3ds" firstAttribute="top" secondItem="fte-MJ-hO5" secondAttribute="bottom" constant="16" id="HrK-Q6-Sv3"/>
-                            <constraint firstItem="fte-MJ-hO5" firstAttribute="top" secondItem="GE9-K9-tcD" secondAttribute="bottom" id="RGP-rC-VCp"/>
-                            <constraint firstItem="aAu-jr-3ds" firstAttribute="top" secondItem="GE9-K9-tcD" secondAttribute="bottom" constant="74" id="mmK-n8-qFi"/>
-                            <constraint firstItem="GE9-K9-tcD" firstAttribute="top" secondItem="eRx-mg-QjH" secondAttribute="top" id="reb-ul-fJB"/>
-                            <constraint firstItem="aAu-jr-3ds" firstAttribute="centerX" secondItem="GE9-K9-tcD" secondAttribute="centerX" id="s1k-Ln-KoM"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="GE9-K9-tcD" id="yWK-Uf-oDW"/>
                         <outlet property="nextButton" destination="aAu-jr-3ds" id="HRB-V5-V5V"/>
                         <outlet property="pageControl" destination="fte-MJ-hO5" id="eix-YI-pYV"/>
                     </connections>
@@ -183,6 +217,9 @@
         <segue reference="WVI-g3-TiD"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
