@@ -118,19 +118,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WFu-N4-ar2">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WFu-N4-ar2">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="621"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mg7-9V-hpx">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mg7-9V-hpx">
                                     <size key="itemSize" width="393" height="631"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iFg-nj-K5g">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="631"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="iFg-nj-K5g" customClass="OnboardingCollectionViewCell" customModule="hikingSafe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-5" width="393" height="631"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nku-bA-Vf2">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="631"/>
@@ -167,8 +167,17 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="631"/>
+                                        <connections>
+                                            <outlet property="slideDescriptionLabel" destination="XfT-gi-gwW" id="1Gd-dq-WPC"/>
+                                            <outlet property="slideImageView" destination="aP0-7Q-mM5" id="9Rr-In-x3t"/>
+                                            <outlet property="slideTitleLabel" destination="2AP-br-z9c" id="OxP-mQ-b3Q"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="24r-Fq-axK" id="Oqa-e8-uvH"/>
+                                    <outlet property="delegate" destination="24r-Fq-axK" id="pSG-ch-7CB"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAu-jr-3ds">
                                 <rect key="frame" x="121.33333333333333" y="685" width="150.33333333333337" height="50"/>
