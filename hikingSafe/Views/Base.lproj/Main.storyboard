@@ -122,7 +122,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="621"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mg7-9V-hpx">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Mg7-9V-hpx">
                                     <size key="itemSize" width="393" height="631"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -136,41 +136,52 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="631"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP0-7Q-mM5">
-                                                    <rect key="frame" x="0.0" y="8" width="393" height="100"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-qn-EIs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="525.66666666666663"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-GG-S9R">
-                                                    <rect key="frame" x="16" y="116" width="361" height="65.333333333333314"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iv2-Fp-mLY">
+                                                    <rect key="frame" x="16" y="541.66666666666663" width="361" height="73.333333333333371"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AP-br-z9c">
-                                                            <rect key="frame" x="110.66666666666669" y="0.0" width="140" height="37"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za5-NL-ObF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="361" height="37"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-gi-gwW">
-                                                            <rect key="frame" x="119" y="45" width="123.33333333333331" height="20.333333333333329"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Delivery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-qX-7eK">
+                                                            <rect key="frame" x="0.0" y="53" width="361" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="JZ7-qX-7eK" firstAttribute="leading" secondItem="iv2-Fp-mLY" secondAttribute="leading" id="7Mo-6i-mzA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JZ7-qX-7eK" secondAttribute="trailing" id="HUB-bd-eT1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="za5-NL-ObF" secondAttribute="trailing" id="aS9-X3-yFY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JZ7-qX-7eK" secondAttribute="bottom" id="fZ7-uO-ovh"/>
+                                                        <constraint firstItem="JZ7-qX-7eK" firstAttribute="top" secondItem="za5-NL-ObF" secondAttribute="bottom" constant="16" id="oST-pb-CL3"/>
+                                                        <constraint firstItem="za5-NL-ObF" firstAttribute="leading" secondItem="iv2-Fp-mLY" secondAttribute="leading" id="vGx-ht-wW2"/>
+                                                        <constraint firstItem="JZ7-qX-7eK" firstAttribute="top" secondItem="za5-NL-ObF" secondAttribute="bottom" constant="16" id="xL2-iw-ccE"/>
+                                                        <constraint firstItem="za5-NL-ObF" firstAttribute="top" secondItem="iv2-Fp-mLY" secondAttribute="top" id="zVF-Wy-LPy"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aP0-7Q-mM5" firstAttribute="leading" secondItem="nku-bA-Vf2" secondAttribute="leading" id="3vD-S6-Mld"/>
-                                                <constraint firstItem="hoH-GG-S9R" firstAttribute="top" secondItem="aP0-7Q-mM5" secondAttribute="bottom" constant="8" id="7lL-Fq-dwa"/>
-                                                <constraint firstItem="aP0-7Q-mM5" firstAttribute="top" secondItem="nku-bA-Vf2" secondAttribute="top" id="PNa-i0-biK"/>
-                                                <constraint firstAttribute="trailing" secondItem="hoH-GG-S9R" secondAttribute="trailing" constant="16" id="Zfg-XI-w9G"/>
-                                                <constraint firstItem="hoH-GG-S9R" firstAttribute="leading" secondItem="nku-bA-Vf2" secondAttribute="leading" constant="16" id="aIe-BI-px3"/>
-                                                <constraint firstAttribute="trailing" secondItem="aP0-7Q-mM5" secondAttribute="trailing" id="o0C-AX-Tpl"/>
+                                                <constraint firstItem="iv2-Fp-mLY" firstAttribute="top" secondItem="wMW-qn-EIs" secondAttribute="bottom" constant="16" id="24s-JO-vnP"/>
+                                                <constraint firstAttribute="bottom" secondItem="iv2-Fp-mLY" secondAttribute="bottom" constant="16" id="BcD-bM-6Uh"/>
+                                                <constraint firstItem="wMW-qn-EIs" firstAttribute="centerX" secondItem="iv2-Fp-mLY" secondAttribute="centerX" id="F8C-Dt-wKl"/>
+                                                <constraint firstItem="wMW-qn-EIs" firstAttribute="top" secondItem="nku-bA-Vf2" secondAttribute="top" id="OZh-Nm-eSX"/>
+                                                <constraint firstAttribute="trailing" secondItem="iv2-Fp-mLY" secondAttribute="trailing" constant="16" id="SBn-e9-CII"/>
+                                                <constraint firstItem="wMW-qn-EIs" firstAttribute="leading" secondItem="nku-bA-Vf2" secondAttribute="leading" id="X47-DK-fWy"/>
+                                                <constraint firstItem="iv2-Fp-mLY" firstAttribute="leading" secondItem="nku-bA-Vf2" secondAttribute="leading" constant="16" id="fvf-6i-Ito"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="631"/>
                                         <connections>
-                                            <outlet property="slideDescriptionLabel" destination="XfT-gi-gwW" id="1Gd-dq-WPC"/>
-                                            <outlet property="slideImageView" destination="aP0-7Q-mM5" id="9Rr-In-x3t"/>
-                                            <outlet property="slideTitleLabel" destination="2AP-br-z9c" id="OxP-mQ-b3Q"/>
+                                            <outlet property="slideDescriptionLabel" destination="JZ7-qX-7eK" id="W0T-di-4SR"/>
+                                            <outlet property="slideImageView" destination="wMW-qn-EIs" id="FJC-yF-B1d"/>
+                                            <outlet property="slideTitleLabel" destination="za5-NL-ObF" id="aIV-fS-3cd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -196,7 +207,7 @@
                                     <action selector="nextButtonClicked:" destination="24r-Fq-axK" eventType="touchUpInside" id="C65-kK-EpU"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fte-MJ-hO5">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fte-MJ-hO5">
                                 <rect key="frame" x="138.66666666666666" y="643" width="115.66666666666666" height="26"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.21513500029999999" green="0.5" blue="0.1756427468" alpha="0.25022746709999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,6 +224,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="WFu-N4-ar2" id="1TE-sW-224"/>
                         <outlet property="nextButton" destination="aAu-jr-3ds" id="HRB-V5-V5V"/>
                         <outlet property="pageControl" destination="fte-MJ-hO5" id="eix-YI-pYV"/>
                     </connections>
