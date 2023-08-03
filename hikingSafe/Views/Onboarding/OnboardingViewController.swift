@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class OnboardingViewController: UIViewController {
     
@@ -25,6 +26,19 @@ class OnboardingViewController: UIViewController {
                 nextButton.setTitle("Next Trail", for: .normal)
             }
         }
+    }
+    
+    @IBAction func showNavigation(_ sender: Any) {
+        let latitude:CLLocationDegrees = 37.86911286093985
+        let longitude:CLLocationDegrees = -119.53606438981882
+        let regionDistance:CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan:regionSpan.span)]
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Selected Trail"
+        mapItem.openInMaps(launchOptions: options)
     }
     
     override func viewDidLoad() {
