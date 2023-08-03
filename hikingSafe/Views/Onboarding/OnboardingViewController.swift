@@ -39,6 +39,18 @@ class OnboardingViewController: UIViewController {
         ]
     }
     
+    
+    @IBAction func notifyStartPressed(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: ["Starting my hike!  I will notify you when I'm done."], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func notifyEndPressed(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: ["Just finished my hike!  Thank you!"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+    }
     @IBAction func nextButtonClicked(_ sender: UIButton){
         if currentPage ==  slides.count - 1{
             currentPage = 0
