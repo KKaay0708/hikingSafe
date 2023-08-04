@@ -1,0 +1,6 @@
+framework module Pods_hikingSafeTests {
+  umbrella header "Pods-hikingSafeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
