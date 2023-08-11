@@ -7,6 +7,8 @@
 
 import UIKit
 import MapKit
+import Firebase
+
 
 class OnboardingViewController: UIViewController {
     
@@ -14,12 +16,14 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var currentPageLabel: UILabel!
+        
     var slides: [OnboardingSlide] = []
-    
+            
     var currentPage = 0 {
         didSet{
             pageControl.currentPage = currentPage
+            currentPageLabel.text = String(currentPage)
             if currentPage == slides.count - 1 {
                 nextButton.setTitle("Restart", for: .normal)
             } else {
@@ -69,6 +73,7 @@ class OnboardingViewController: UIViewController {
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
     }
+        
     @IBAction func nextButtonClicked(_ sender: UIButton){
         if currentPage ==  slides.count - 1{
             currentPage = 0
@@ -110,5 +115,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         currentPage = Int(scrollView.contentOffset.x/width)
         pageControl.currentPage = currentPage
     }
+    
+
 }
 

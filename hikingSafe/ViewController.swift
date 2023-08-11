@@ -13,6 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func trail1Clicked(_ sender: Any) {
+    }
+    
+    @IBAction func trail2Clicked(_ sender: Any) {
+    }
     
 }
 
