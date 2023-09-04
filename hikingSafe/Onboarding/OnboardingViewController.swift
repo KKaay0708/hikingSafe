@@ -17,6 +17,8 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var currentPageLabel: UILabel!
+    
+    var currentPages: String = "0"
         
     var slides: [OnboardingSlide] = []
             
@@ -32,8 +34,19 @@ class OnboardingViewController: UIViewController {
         }
     }
     
-    func getCurrentPage() -> Int {
-        return currentPage
+    func getCurrentPage() -> String {
+        return currentPageLabel.text!
+    }
+    
+    @IBAction func animalsClicked(_ sender: Any) {
+        AdditionalInfoViewController.type = "Animals"
+        currentPages = currentPageLabel.text!
+    }
+    
+    @IBAction func plantsClicked(_ sender: Any) {
+        AdditionalInfoViewController.type = "Plants"
+        currentPages = currentPageLabel.text!
+
     }
     
     @IBAction func showNavigation(_ sender: Any) {
@@ -53,12 +66,18 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
 
         slides = [
-            OnboardingSlide(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "safe")),
-            OnboardingSlide(title: "World-Class Chefs", description: "Our dishes are prepared by only the best.", image: #imageLiteral(resourceName: "safe")),
-            OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "safe")),
-            OnboardingSlide(title: "Next1", description: "Next1.", image: #imageLiteral(resourceName: "safe")),
-            OnboardingSlide(title: "Next2", description: "Next2", image: #imageLiteral(resourceName: "safe"))
+            OnboardingSlide(title: "Yosemite National Park", description: "First Trail.", image: #imageLiteral(resourceName: "yosemite")),
+            OnboardingSlide(title: "Appalachain Trail", description: "Second Trail.", image: #imageLiteral(resourceName: "appalachain")),
+            OnboardingSlide(title: "Burroughs Mountail Trail", description: "Third Trail.", image: #imageLiteral(resourceName: "burroughs")),
+            OnboardingSlide(title: "Kalalau Trail", description: "Fourth Trail.", image: #imageLiteral(resourceName: "kalalau")),
+            OnboardingSlide(title: "South Rim Trail", description: "Fifth Trail.", image: #imageLiteral(resourceName: "south"))
         ]
+        
+        func scrollToCurrent(newPage: Int){
+            currentPage = 0
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
     }
     
     
@@ -85,13 +104,6 @@ class OnboardingViewController: UIViewController {
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
         
-        slides = [
-                    OnboardingSlide(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "safe")),
-                    OnboardingSlide(title: "World-Class Chefs", description: "Our dishes are prepared by only the best.", image: #imageLiteral(resourceName: "safe")),
-                    OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "safe")),
-                    OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "safe")),
-                    OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "danger"))
-                ]
     }
 }
 

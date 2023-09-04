@@ -215,6 +215,7 @@
                                                                 <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
                                                             </buttonConfiguration>
                                                             <connections>
+                                                                <action selector="animalsClicked:" destination="24r-Fq-axK" eventType="touchUpInside" id="DQn-yc-R3e"/>
                                                                 <segue destination="Eki-Ps-ce5" kind="show" id="df7-hN-ipz"/>
                                                             </connections>
                                                         </button>
@@ -229,6 +230,7 @@
                                                                 <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
                                                             </buttonConfiguration>
                                                             <connections>
+                                                                <action selector="plantsClicked:" destination="24r-Fq-axK" eventType="touchUpInside" id="BXS-NG-fSE"/>
                                                                 <segue destination="Eki-Ps-ce5" kind="show" id="TeK-Wf-WDT"/>
                                                             </connections>
                                                         </button>
@@ -292,8 +294,8 @@
                                     <action selector="nextButtonClicked:" destination="24r-Fq-axK" eventType="touchUpInside" id="C65-kK-EpU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVq-vm-YEF">
-                                <rect key="frame" x="16" y="658" width="101" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVq-vm-YEF">
+                                <rect key="frame" x="16" y="658" width="11" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -322,8 +324,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="eTL-6Y-W5w">
-                                <rect key="frame" x="40" y="119" width="310" height="563"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eTL-6Y-W5w">
+                                <rect key="frame" x="40" y="119" width="310" height="535"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sRg-Pj-0uM">
                                         <rect key="frame" x="0.0" y="0.0" width="310" height="171.66666666666666"/>
@@ -348,7 +350,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wIE-2f-rGC">
-                                        <rect key="frame" x="0.0" y="195.66666666666669" width="310" height="171.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="181.66666666666669" width="310" height="171.66666666666669"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt" translatesAutoresizingMaskIntoConstraints="NO" id="gwo-Mg-bIg">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="171.66666666666666"/>
@@ -370,7 +372,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cyt-bP-QSN">
-                                        <rect key="frame" x="0.0" y="391.33333333333331" width="310" height="171.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="363.33333333333331" width="310" height="171.66666666666669"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="essentials" translatesAutoresizingMaskIntoConstraints="NO" id="TLm-Ao-Alz">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="171.66666666666666"/>
@@ -591,7 +593,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="df7-hN-ipz"/>
+        <segue reference="TeK-Wf-WDT"/>
         <segue reference="dC0-dn-W5H"/>
     </inferredMetricsTieBreakers>
     <resources>
