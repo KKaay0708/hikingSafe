@@ -17,9 +17,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var currentPageLabel: UILabel!
-    
-    var currentPages: String = "0"
-        
+            
     var slides: [OnboardingSlide] = []
             
     var currentPage = 0 {
@@ -34,19 +32,14 @@ class OnboardingViewController: UIViewController {
         }
     }
     
-    func getCurrentPage() -> String {
-        return currentPageLabel.text!
-    }
-    
     @IBAction func animalsClicked(_ sender: Any) {
         AdditionalInfoViewController.type = "Animals"
-        currentPages = currentPageLabel.text!
+        InfoController.page = currentPageLabel.text!
     }
     
     @IBAction func plantsClicked(_ sender: Any) {
         AdditionalInfoViewController.type = "Plants"
-        currentPages = currentPageLabel.text!
-
+        InfoController.page = currentPageLabel.text!
     }
     
     @IBAction func showNavigation(_ sender: Any) {

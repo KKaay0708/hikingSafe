@@ -9,11 +9,14 @@ import Foundation
 import Firebase
 
 class InfoController {
+    
+    static var page: String = "0"
+    
     static func getAnimalDatabaseInfo(onSuccess: @escaping () -> Void, onError: @escaping (_ error: Error?) -> Void) {
         let ref =  Database.database().reference()
         let defaults = UserDefaults.standard
         for i in 0...4 {
-            ref.child("trail\(String(OnboardingViewController().currentPages))").child("animals").child("animal\(i)").observe(.value, with: { snapshot in
+            ref.child("trail" + page).child("animals").child("animal\(i)").observe(.value, with: { snapshot in
                 
                 if let dictionary = snapshot.value as? [String: Any] {
                     
@@ -35,7 +38,7 @@ class InfoController {
         let defaults = UserDefaults.standard
         
         for i in 0...4 {
-            ref.child("trail\(String(OnboardingViewController().getCurrentPage()))").child("plants").child("plant\(i)").observe(.value, with: { snapshot in
+            ref.child("trail" + page).child("plants").child("plant\(i)").observe(.value, with: { snapshot in
                 
                 if let dictionary = snapshot.value as? [String: Any] {
                     
