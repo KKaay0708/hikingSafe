@@ -19,7 +19,15 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var currentPageLabel: UILabel!
             
     var slides: [OnboardingSlide] = []
-            
+    
+    static var pagee: Int = 0
+                
+    let trail0 = objectTrail(name: "Yosemite National Park", latitude: 37.86911286093985, longitude: -119.53606438981882, page: "0", desc: "Trail 0", image: #imageLiteral(resourceName: "yosemite"))
+    let trail1 = objectTrail(name: "Appalachain Trail", latitude: 42.289580011600975, longitude: -73.15701486156591, page: "1", desc: "Trail 1", image: #imageLiteral(resourceName: "appalachain"))
+    let trail2 = objectTrail(name: "Burroughs Mountail Trail", latitude: 46.905987670323675, longitude: -121.68963696130662, page: "2", desc: "Trail 2", image: #imageLiteral(resourceName: "burroughs"))
+    let trail3 = objectTrail(name: "Kalalau Trail", latitude: 22.19609578950994, longitude: -159.62040994889966, page: "3", desc: "Trail 3", image: #imageLiteral(resourceName: "kalalau"))
+    let trail4 = objectTrail(name: "South Rim Trail", latitude: 36.058369426516386, longitude: -112.1272768600295, page: "4", desc: "Trail 4", image: #imageLiteral(resourceName: "south"))
+    
     var currentPage = 0 {
         didSet{
             pageControl.currentPage = currentPage
@@ -27,7 +35,7 @@ class OnboardingViewController: UIViewController {
             if currentPage == slides.count - 1 {
                 nextButton.setTitle("Restart", for: .normal)
             } else {
-                nextButton.setTitle("Next Trail", for: .normal)
+                nextButton.setTitle("Next", for: .normal)
             }
         }
     }
@@ -43,8 +51,24 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func showNavigation(_ sender: Any) {
-        let latitude:CLLocationDegrees = 37.86911286093985
-        let longitude:CLLocationDegrees = -119.53606438981882
+        
+        var pagey = currentPageLabel.text!
+        var trailNumber:objectTrail = trail0
+        if(pagey == trail1.getPage()){
+            trailNumber = trail1
+        }
+        if(pagey == trail2.getPage()){
+            trailNumber = trail2
+        }
+        if(pagey == trail3.getPage()){
+            trailNumber = trail3
+        }
+        if(pagey == trail4.getPage()){
+            trailNumber = trail4
+        }
+        
+        let latitude:CLLocationDegrees = trailNumber.getLatitude()
+        let longitude:CLLocationDegrees = trailNumber.getLongitutde()
         let regionDistance:CLLocationDistance = 1000
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
@@ -59,18 +83,15 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
 
         slides = [
-            OnboardingSlide(title: "Yosemite National Park", description: "First Trail.", image: #imageLiteral(resourceName: "yosemite")),
-            OnboardingSlide(title: "Appalachain Trail", description: "Second Trail.", image: #imageLiteral(resourceName: "appalachain")),
-            OnboardingSlide(title: "Burroughs Mountail Trail", description: "Third Trail.", image: #imageLiteral(resourceName: "burroughs")),
-            OnboardingSlide(title: "Kalalau Trail", description: "Fourth Trail.", image: #imageLiteral(resourceName: "kalalau")),
-            OnboardingSlide(title: "South Rim Trail", description: "Fifth Trail.", image: #imageLiteral(resourceName: "south"))
+            OnboardingSlide(title: trail0.getName() , description: trail0.getDescription(), image: trail0.getImage()),
+            OnboardingSlide(title: trail1.getName() , description: trail1.getDescription(), image: trail1.getImage()),
+            OnboardingSlide(title: trail2.getName() , description: trail2.getDescription(), image: trail2.getImage()),
+            OnboardingSlide(title: trail3.getName() , description: trail3.getDescription(), image: trail3.getImage()),
+            OnboardingSlide(title: trail4.getName() , description: trail4.getDescription(), image: trail4.getImage())
         ]
         
-        func scrollToCurrent(newPage: Int){
-            currentPage = 0
-            let indexPath = IndexPath(item: currentPage, section: 0)
-            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }
+        let indexPath = IndexPath(item: OnboardingViewController.pagee, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
     

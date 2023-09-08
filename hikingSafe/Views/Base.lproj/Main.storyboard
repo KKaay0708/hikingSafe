@@ -30,7 +30,7 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="trail1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIW-IT-uip"/>
+                                            <action selector="trail0Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EsW-Pk-kcj"/>
                                             <segue destination="24r-Fq-axK" kind="presentation" id="Ozl-xe-f7q"/>
                                         </connections>
                                     </button>
@@ -44,7 +44,7 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="trail2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHd-pV-n0K"/>
+                                            <action selector="trail1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="855-OB-AmZ"/>
                                             <segue destination="24r-Fq-axK" kind="presentation" id="dC0-dn-W5H"/>
                                         </connections>
                                     </button>
@@ -57,6 +57,10 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="trail2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rcv-Cd-coE"/>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="lZB-AD-7Sc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-Cf-adH">
                                         <rect key="frame" x="0.0" y="475.66666666666669" width="361" height="148.66666666666669"/>
@@ -67,6 +71,10 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="trail3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQY-ui-8zJ"/>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="3BA-SM-p80"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtK-rj-M47">
                                         <rect key="frame" x="0.0" y="634.33333333333337" width="361" height="148.66666666666663"/>
@@ -77,6 +85,10 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="trail4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCH-uc-mLr"/>
+                                            <segue destination="24r-Fq-axK" kind="presentation" id="ksI-3m-o23"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -314,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vt5-Y6-9A4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733.58778625954199" y="13.380281690140846"/>
+            <point key="canvasLocation" x="734" y="4"/>
         </scene>
         <!--Bring View Controller-->
         <scene sceneID="jS1-lZ-6Gx">
@@ -594,7 +606,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="TeK-Wf-WDT"/>
-        <segue reference="dC0-dn-W5H"/>
+        <segue reference="lZB-AD-7Sc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="essentials" width="189.33332824707031" height="146.33332824707031"/>
