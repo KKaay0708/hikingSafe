@@ -59,10 +59,10 @@ class AdditionalInfoViewController: UIViewController {
                     InfoController.getAnimalDatabaseInfo(onSuccess: {
                         let dangerOrSafe = defaults.bool(forKey: "animal\(i-5)DangerKey")
                         if (dangerOrSafe) {
-                        imageName.image = #imageLiteral(resourceName: "danger")
-                    } else {
-                        imageName.image = #imageLiteral(resourceName: "safe")
-                    }
+                            imageName.image = #imageLiteral(resourceName: "danger")
+                        } else {
+                            imageName.image = #imageLiteral(resourceName: "safe")
+                        }
                     }) { (error) in
                         print("error.")
                     }
@@ -71,10 +71,10 @@ class AdditionalInfoViewController: UIViewController {
                     InfoController.getPlantDatabaseInfo(onSuccess: {
                         let dangerOrSafe = defaults.bool(forKey: "plant\(i-5)DangerKey")
                         if (dangerOrSafe) {
-                        imageName.image = #imageLiteral(resourceName: "danger")
-                    } else {
-                        imageName.image = #imageLiteral(resourceName: "safe")
-                    }
+                            imageName.image = #imageLiteral(resourceName: "danger")
+                        } else {
+                            imageName.image = #imageLiteral(resourceName: "safe")
+                        }
                     }) { (error) in
                         print("error.")
                     }

@@ -8,9 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func sosClicked(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: ["Please send help to this location: \(sosController.currentLocation)"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+        
+        print(sosController.currentLocation + "YAH")
     }
     
     @IBAction func trail0Clicked(_ sender: Any) {
