@@ -14,12 +14,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sosClicked(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: ["Please send help to this location: \(sosController.currentLocation)"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["Please send help to this location: 34.1242 N, 118.1242 S"], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
-        
-        print(sosController.currentLocation + "YAH")
-    }
+        }
     
     @IBAction func trail0Clicked(_ sender: Any) {
         OnboardingViewController.pagee = 0
