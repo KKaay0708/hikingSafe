@@ -24,6 +24,7 @@
 		126E82FD2A79CCCD0044F73C /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E82FC2A79CCCD0044F73C /* OnboardingCollectionViewCell.swift */; };
 		126E82FF2A7C52840044F73C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 126E82FE2A7C52840044F73C /* GoogleService-Info.plist */; };
 		12901E8A2AAACD3100D492A0 /* objectTrail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12901E892AAACD3100D492A0 /* objectTrail.swift */; };
+		12E273432AB575DC004823C9 /* sosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E273422AB575DC004823C9 /* sosController.swift */; };
 		829B8C717F5A711C49809089 /* Pods_hikingSafe_hikingSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BAB2A6E8562B79CB8DAB6A /* Pods_hikingSafe_hikingSafeUITests.framework */; };
 		C1D253C3E71171FE5F4EA23C /* Pods_hikingSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C5497D427547B213A0C1CD /* Pods_hikingSafe.framework */; };
 		FDBCCC99887FF4D87E7CCC37 /* Pods_hikingSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74CACEF687D3DF99F72CF3D /* Pods_hikingSafeTests.framework */; };
@@ -68,6 +69,7 @@
 		126E82FC2A79CCCD0044F73C /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		126E82FE2A7C52840044F73C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12901E892AAACD3100D492A0 /* objectTrail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objectTrail.swift; sourceTree = "<group>"; };
+		12E273422AB575DC004823C9 /* sosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sosController.swift; sourceTree = "<group>"; };
 		12EE1E8953075068694FCF51 /* Pods-hikingSafe-hikingSafeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hikingSafe-hikingSafeUITests.release.xcconfig"; path = "Target Support Files/Pods-hikingSafe-hikingSafeUITests/Pods-hikingSafe-hikingSafeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		28F08F8D78B1050622721687 /* Pods-hikingSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hikingSafe.debug.xcconfig"; path = "Target Support Files/Pods-hikingSafe/Pods-hikingSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		7737A3CE3D5376EBABA24A54 /* Pods-hikingSafe-hikingSafeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hikingSafe-hikingSafeUITests.debug.xcconfig"; path = "Target Support Files/Pods-hikingSafe-hikingSafeUITests/Pods-hikingSafe-hikingSafeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				126DECC52A7C64C100E964F9 /* AdditionalInfoViewController.swift */,
 				126DECC72A7C723600E964F9 /* BringViewController.swift */,
 				12901E892AAACD3100D492A0 /* objectTrail.swift */,
+				12E273422AB575DC004823C9 /* sosController.swift */,
 			);
 			path = hikingSafe;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				126E82F72A79AF980044F73C /* OnboardingViewController.swift in Sources */,
 				126DECC42A7C5DCB00E964F9 /* InfoController.swift in Sources */,
 				126DECC82A7C723600E964F9 /* BringViewController.swift in Sources */,
+				12E273432AB575DC004823C9 /* sosController.swift in Sources */,
 				12036D212A784BF400C3D65D /* AppDelegate.swift in Sources */,
 				126E82FB2A79B6550044F73C /* OnboardingSlide.swift in Sources */,
 				126DECC62A7C64C100E964F9 /* AdditionalInfoViewController.swift in Sources */,
