@@ -24,13 +24,13 @@ class OnboardingViewController: UIViewController {
     
     //descriptions from national park service and department of land and natural resources
     
-    let trail0 = objectTrail(name: "Yosemite National Park", latitude: 37.86911286093985, longitude: -119.53606438981882, page: "0", desc: "The park is noted for its outstanding scenery—including peaks, canyons, cliffs, domes, rivers, lakes, immense waterfalls, lush green meadows, wildlife, and forests.", image: #imageLiteral(resourceName: "yosemite"))
-    let trail1 = objectTrail(name: "Appalachain Trail", latitude: 42.289580011600975, longitude: -73.15701486156591, page: "1", desc: "The Appalachian Trail is a 2,190+ mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains.", image: #imageLiteral(resourceName: "appalachain"))
-    let trail2 = objectTrail(name: "Burroughs Mountain Trail", latitude: 46.905987670323675, longitude: -121.68963696130662, page: "2", desc: "Traveling in a clockwise direction, the trail passes Shadow Lake on a level grade then climbs sharply to an overlook on the White River and Emmons Glacier. Beyond the overlook the route continues up and onto the wide, flat plateau of First Burroughs Mountain.", image: #imageLiteral(resourceName: "burroughs"))
-    let trail3 = objectTrail(name: "Kalalau Trail", latitude: 22.19609578950994, longitude: -159.62040994889966, page: "3", desc: "The trail traverses five valleys before ending at Kalalau Beach where it is blocked by sheer, fluted cliffs. The 11-mile trail is graded but almost never level as it crosses above towering sea cliffs and through lush tropical valleys. The trail drops to sea level at the beaches of Hanakapi'ai and Kalalau.", image: #imageLiteral(resourceName: "kalalau"))
-    let trail4 = objectTrail(name: "South Rim Trail", latitude: 36.058369426516386, longitude: -112.1272768600295, page: "4", desc: "South Rim Day Hikes. The Rim Trail extends from the village area to Hermits Rest. Begin from any viewpoint in the Village or along Hermit Road. The Rim Trail offers excellent walking for quiet views of the inner canyon and for visitors who desire an easy hike.", image: #imageLiteral(resourceName: "south"))
+    let trail0 = objectTrail(name: "Yosemite National Park", latitude: 37.86911286093985, longitude: -119.53606438981882, page: "0", desc: "The park is noted for its outstanding scenery—including peaks, canyons, cliffs, domes, rivers, lakes, immense waterfalls, lush green meadows, wildlife, and forests.", image: #imageLiteral(resourceName: "yosemite"), length: 10.0, clothes: "Waterproof Jacket\nLong Sleeve Shirt\nT-Shirt")
+    let trail1 = objectTrail(name: "Appalachain Trail", latitude: 42.289580011600975, longitude: -73.15701486156591, page: "1", desc: "The Appalachian Trail is a 2,190+ mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains.", image: #imageLiteral(resourceName: "appalachain"), length: 8.0, clothes: "Light Puffy Jacket\nRaingear\nHiking Shoes\nSocks")
+    let trail2 = objectTrail(name: "Burroughs Mountain Trail", latitude: 46.905987670323675, longitude: -121.68963696130662, page: "2", desc: "Traveling in a clockwise direction, the trail passes Shadow Lake on a level grade then climbs sharply to an overlook on the White River and Emmons Glacier. Beyond the overlook the route continues up and onto the wide, flat plateau of First Burroughs Mountain.", image: #imageLiteral(resourceName: "burroughs"), length: 4.0, clothes: "Soft Jacket\nPuffy Jacket\nHiking Shorts\n Winter Hat\nGloves")
+    let trail3 = objectTrail(name: "Kalalau Trail", latitude: 22.19609578950994, longitude: -159.62040994889966, page: "3", desc: "The trail traverses five valleys before ending at Kalalau Beach where it is blocked by sheer, fluted cliffs. The 11-mile trail is graded but almost never level as it crosses above towering sea cliffs and through lush tropical valleys. The trail drops to sea level at the beaches of Hanakapi'ai and Kalalau.", image: #imageLiteral(resourceName: "kalalau"), length: 10.0, clothes: "Sun Shirt\nWater Shoes\nSocks\nRunning Shorts")
+    let trail4 = objectTrail(name: "South Rim Trail", latitude: 36.058369426516386, longitude: -112.1272768600295, page: "4", desc: "South Rim Day Hikes. The Rim Trail extends from the village area to Hermits Rest. Begin from any viewpoint in the Village or along Hermit Road. The Rim Trail offers excellent walking for quiet views of the inner canyon and for visitors who desire an easy hike.", image: #imageLiteral(resourceName: "south"), length: 10.0, clothes: "Shorts\nLong Sleeves\nJacket\nActive Wear\nT-Shirt")
     
-    var currentPage = 0 {
+    lazy var currentPage = 0 {
         didSet{
             pageControl.currentPage = currentPage
             currentPageLabel.text = String(currentPage)
@@ -40,6 +40,33 @@ class OnboardingViewController: UIViewController {
                 nextButton.setTitle("Next", for: .normal)
             }
         }
+    }
+    
+    func getCurrentPage() -> objectTrail{
+        let pagey:Int = currentPage
+        var trailNumber:objectTrail = trail0
+        if(pagey == Int(trail1.getPage())){
+            trailNumber = trail1
+        }
+        if(pagey == Int(trail2.getPage())){
+            trailNumber = trail2
+        }
+        if(pagey == Int(trail3.getPage())){
+            trailNumber = trail3
+        }
+        if(pagey == Int(trail4.getPage())){
+            trailNumber = trail4
+        }
+        return trailNumber
+    }
+    
+    func showWater() -> Double {
+        let trailNumber = self.getCurrentPage()
+        return trailNumber.getLength()*1.5
+    }
+    func showClothes() -> String {
+        let trailNumber = self.getCurrentPage()
+        return trailNumber.getClothes()
     }
     
     @IBAction func animalsClicked(_ sender: Any) {

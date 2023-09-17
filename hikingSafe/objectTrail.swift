@@ -15,14 +15,18 @@ class objectTrail: NSObject {
     var page: String
     var desc: String
     var image: UIImage
+    var length: Double
+    var clothes: String
     
-    init(name:String, latitude:CLLocationDegrees, longitude:CLLocationDegrees, page:String, desc:String, image:UIImage){
+    init(name:String, latitude:CLLocationDegrees, longitude:CLLocationDegrees, page:String, desc:String, image:UIImage, length: Double, clothes: String){
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
         self.page = page
         self.desc = desc
         self.image = image
+        self.length = length
+        self.clothes = clothes
     }
     
     
@@ -44,6 +48,12 @@ class objectTrail: NSObject {
     }
     func getImage() -> UIImage {
         return self.image
+    }
+    func getLength() -> Double {
+        return self.length
+    }
+    func getClothes() -> String {
+        return self.clothes
     }
     
 }

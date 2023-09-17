@@ -16,6 +16,8 @@ class BringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        waterLabel.text = String(OnboardingViewController().showWater()) + " Liters"
+        clothesLabel.text = OnboardingViewController().showClothes()
         essentialsLabel.text = "Pocketknife \nFirst Aid Kit \nExtra Clothing \nRain Gear \nWater \nFlashlight \nTrail Food \nFire Starters \nSun Protection \nMap and Compass\n"
 
     }
